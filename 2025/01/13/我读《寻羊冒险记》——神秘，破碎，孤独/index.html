@@ -417,7 +417,11 @@
           {
             el: "#valine",
             path: window.location.pathname,
-            avatar: 'https://cravatar.cn/avatar/'
+            avatar: '',
+            cdn: {
+              // 将 Gravatar 域名替换为 Cravatar
+              gravatar: 'https://cravatar.cn/avatar/'
+            }
           }
         )
         new Valine(options);
