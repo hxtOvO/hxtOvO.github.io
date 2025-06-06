@@ -403,18 +403,13 @@
   <div id="valine"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#valine', function() {
-      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+      Fluid.utils.createScript('/js/Valine.min.js', function() {
         var options = Object.assign(
           {"appId":"odB2gDHDlTZYeb3qONwq9K51-gzGzoHsz","appKey":"Uqu5OKub7qNAJpncBHSjHgTk","path":"window.location.pathname","placeholder":null,"avatar":null,"meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
           {
             el: "#valine",
             path: window.location.pathname,
-            avatar: '',
-            cdn: {
-              // 将 Gravatar 域名替换为 Cravatar
-              gravatar: 'https://cravatar.cn/avatar/',
-              avatarForce: true
-            }
+            avatar: 'https://cravatar.cn/avatar/'
           }
         )
         new Valine(options);
